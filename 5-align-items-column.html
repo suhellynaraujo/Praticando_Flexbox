@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align items</title>
+    <style>
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .center{
+            align-items: center;
+        }
+
+        .stretch{
+            align-items: stretch;
+        }
+
+        .start{
+            align-items: flex-start;
+        }
+
+        .end{
+            align-items: flex-end;
+        }
+
+        .baseline{
+            align-items: baseline;
+        }
+
+        .central{
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>center</h1>
+    <section class="container center column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet </div>
+        <div class="item">item 3 mais algum texto.lipsum</div>
+    </section>
+
+    <h1>stretch</h1>
+    <section class="container stretch column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem </div>
+        <div class="item">item 3 mais algum texto.lipsum</div>
+    </section>
+
+    <h1>flex-start</h1>
+    <section class="container  start column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem </div>
+        <div class="item">item 3 mais algum texto.lipsum</div>
+    </section>
+
+    <h1>flex-end</h1>
+    <section class="container end column">
+        <div class="item">item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem </div>
+        <div class="item">item 3 mais algum texto.lipsum</div>
+    </section>
+
+    <h1>baseline</h1>
+    <section class="container baseline column">
+        <div class="item"> <br> item 1</div>
+        <div class="item">Lorem ipsum, dolor sit amet </div>
+        <div class="item">item 3 mais algum texto.lipsum</div>
+    </section>
+
+    <h1>alinhamento central</h1>
+    <section class="container central center">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae neque dignissimos inventore ullam! 
+        </div>
+    </section>
+
+    
+</body>
+</html>
